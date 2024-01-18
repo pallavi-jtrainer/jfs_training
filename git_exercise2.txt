@@ -1,0 +1,32 @@
+Story Creation: [ Decide a story among the teams ]
+• In the local repo,
+
+• Team member 1 :
+1. create a branch ‘character’
+2. Add <storyname>.txt file in the ‘character’ branch
+3. list the characters and give an intro about the characters
+
+• Team member 2 :
+1. create a branch ‘setting’
+2. Add <storyname>.txt file in the ‘setting’ branch
+3. Describe the setting of the story in <storyname>.txt file
+
+• Team member 3 :
+1. create a branch ‘plot’
+2. Add <storyname>.txt file in the ‘plot’ branch
+3. Write the plot of the story in <storyname>.txt file
+
+Team member 4:
+1. create a branch ‘conflict’
+2. Add <storyname>.txt file in the ‘conflict’ branch
+3. Write the conflict of the story in <storyname>.txt file
+
+• Team member 5:
+1. create a branch ‘theme’
+2. Add <storyname>.txt file in the ‘theme’ branch
+3. Write the theme of the story in <storyname>.txt file
+
+- Perform all the life cycle commands, do rebase, resolve the conflicts, create the pull request one by one and merge the changes in the remote repo.
+- Once merged, delete the local and remote branches.
+
+Note: The remote repo should contain only one file <storyname>.txt, which has character, setting, plot, conflict & theme.

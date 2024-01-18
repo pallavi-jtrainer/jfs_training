@@ -1,0 +1,4 @@
+1. Create a new branch with the branch name ‘ TeamDetails
+2. Add myteams.txt in the branch.
+3. Each one of you in the team add your name in the myteams.txt file.
+4. Do all life cycle commands, rebase it, resolve the conflicts and merge your changes in the remote repo.
