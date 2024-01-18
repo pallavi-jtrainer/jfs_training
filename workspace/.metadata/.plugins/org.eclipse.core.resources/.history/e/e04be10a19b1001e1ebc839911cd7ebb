@@ -1,0 +1,5 @@
+package com.springpeople.hms.entity;
+
+public class Rooms {
+
+}

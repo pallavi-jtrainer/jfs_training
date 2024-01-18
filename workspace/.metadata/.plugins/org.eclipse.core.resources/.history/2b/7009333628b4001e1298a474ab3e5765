@@ -1,0 +1,13 @@
+/*
+ * Iterator <- ListIterator
+ * List <- ArrayList, Vector, LinkedList, Stack
+ * Map <- HashMap, TreeMap
+ * Set <- HashSet, TreeSet
+ * Queue <- Deque, PriorityQ
+ */
+
+package com.springpeople.projectx.collections;
+
+public class CollectionsDemo {
+
+}

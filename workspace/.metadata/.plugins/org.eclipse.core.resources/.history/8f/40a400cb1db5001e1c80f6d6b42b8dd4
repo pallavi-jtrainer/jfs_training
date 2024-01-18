@@ -1,0 +1,5 @@
+package com.springpeople.mavendemo.entity;
+
+public class Courses {
+
+}

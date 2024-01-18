@@ -1,0 +1,34 @@
+package com.springpeople.jdbcdemo.connectivity;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.springpeople.jdbcdemo.entity.Products;
+
+public class ProductsDb {
+
+	public static int createProduct(Products p) {
+		String sql = "INSERT INTO PRODUCTS (PRODUCTID, PRODUCTNAME, UNITPRICE) VALUES (?, ?, ?)";
+		int res = 0;
+		
+		Connection con = DbConnection.createConnection();
+		
+		if(con != null) {
+			try {
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setInt(1, p.getProductId());
+				ps.setString(2, p.getProductName());
+				ps.setDouble(3, p.getUnitPrice());
+				
+				res = ps.executeUpdate();   //dml statements only
+				//con.commit(); //in case auto-commit is off
+				con.close();
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		return res;
+	}
+}

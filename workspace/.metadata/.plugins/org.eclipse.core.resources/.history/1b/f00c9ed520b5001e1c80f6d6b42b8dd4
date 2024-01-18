@@ -1,0 +1,33 @@
+package com.springpeople.mavendemo.connectivity;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class StudentDb {
+	private static int getLastRow() {
+		int id = 1;
+		Connection con = DbConnect.createConnection();
+		
+		if(con != null) {
+			String sql = "SELECT * FROM STUDENTS ORDER BY STUDENT_ID DESC LIMIT 1";
+			
+			try {
+				Statement s = con.createStatement();
+				ResultSet rs = s.executeQuery(sql);
+				
+				while(rs.next() != false) {
+					id = rs.getInt("STUDENT_ID");
+				}
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return id;
+	}
+}

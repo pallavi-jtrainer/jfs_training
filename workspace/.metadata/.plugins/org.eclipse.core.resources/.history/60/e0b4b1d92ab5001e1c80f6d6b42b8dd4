@@ -1,0 +1,11 @@
+package com.springpeople.mavendemo.factory;
+
+import com.springpeople.mavendemo.connectivity.StudentDb;
+import com.springpeople.mavendemo.entity.Students;
+
+public class StudentsFactory {
+	public static String registerStudent(Students s, int courseId) {
+		String str = StudentDb.registerStudent(s, courseId);
+		return str;
+	}
+}

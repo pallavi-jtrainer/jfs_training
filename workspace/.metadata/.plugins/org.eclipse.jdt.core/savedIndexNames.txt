@@ -1,0 +1,10 @@
+INDEX VERSION 1.134+E:\training\paychex\workspace\.metadata\.plugins\org.eclipse.jdt.core
+4134699615.index
+3582547859.index
+2380175872.index
+4216499542.index
+504647959.index
+1125206772.index
+50118908.index
+1139073832.index
+1865797976.index

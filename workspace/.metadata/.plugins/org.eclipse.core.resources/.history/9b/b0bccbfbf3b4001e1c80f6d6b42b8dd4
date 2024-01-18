@@ -1,0 +1,17 @@
+package com.springpeople.threaddemo;
+
+public class RunnableWorker implements Runnable{
+
+	@Override
+	public void run() {
+		for(int i = 0; i < 5; i++) {
+			System.out.println(Thread.currentThread().getName() + ": " + i);
+			
+			if(i == 2) {
+				Thread.currentThread().notify();
+			}
+		}
+		
+	}
+
+}

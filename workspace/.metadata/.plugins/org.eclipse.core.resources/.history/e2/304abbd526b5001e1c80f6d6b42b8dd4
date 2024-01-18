@@ -1,0 +1,41 @@
+package com.springpeople.mavendemo.connectivity;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.springpeople.mavendemo.entity.Courses;
+
+public class CoursesDb {
+
+	public static List<Courses> listAllCourses() {
+		String sql = "SELECT * FROM COURSES";
+		List<Courses> courses = new ArrayList<Courses>();
+		
+		Connection con = DbConnect.createConnection();
+		
+		if(con != null) {
+			try {
+				Statement s = con.createStatement();
+				ResultSet rs = s.executeQuery(sql);
+				
+				while(rs.next()) {
+					Courses c = new Courses();
+					c.setCourseId(rs.getInt("COURSE_ID"));
+					c.setCourseName(rs.getString("COURSE_NAME"));
+					courses.add(c);
+				}
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return courses;
+	}
+}

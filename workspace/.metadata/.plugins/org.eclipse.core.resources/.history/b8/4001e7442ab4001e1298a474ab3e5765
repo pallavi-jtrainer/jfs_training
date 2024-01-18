@@ -1,0 +1,48 @@
+/*
+ * Iterator <- ListIterator
+ * List <- ArrayList, Vector, LinkedList, Stack
+ * Map <- HashMap, TreeMap
+ * Set <- HashSet, TreeSet
+ * Queue <- Deque, PriorityQ
+ */
+
+package com.springpeople.projectx.collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class CollectionsDemo {
+	public void listDemo() {
+		/*
+		 * methods of lists:
+		 * add, addAll, remove, get, set, iterator, clear,
+		 * size, toArray, removeAll, contains
+		 * 
+		 * arraylists:
+		 * clone, sort, isEmpty, indexOf
+		 */
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		numbers.add(3);
+		numbers.add(12);
+		
+		System.out.println(numbers);
+		numbers.add(1, 23);
+		System.out.println(numbers);
+		
+		int ele = numbers.get(2);
+		System.out.println("Element: " + ele);
+		
+//		for(int i = 0; i < numbers.size(); i++) {
+//			System.out.println(numbers.get(i));
+//		}
+		
+		Iterator<Integer> itr = numbers.iterator();
+		
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		
+	}
+	
+}

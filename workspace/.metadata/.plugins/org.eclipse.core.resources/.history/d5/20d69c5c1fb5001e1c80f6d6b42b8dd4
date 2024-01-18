@@ -1,0 +1,5 @@
+package com.springpeople.mavendemo.connectivity;
+
+public class StudentDb {
+
+}

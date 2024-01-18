@@ -1,0 +1,22 @@
+package com.springpeople.projectx.fileio;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FilesDemo {
+
+	public void writeToFile() {
+		String path = "E:\\training\\paychex\\sample.txt";
+		String data = "This is the line I want to write into the file";
+		try {
+			FileOutputStream fOut = new FileOutputStream(path);
+			byte[] array = data.getBytes();
+			fOut.write(array);
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}

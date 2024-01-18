@@ -1,0 +1,16 @@
+package com.springpeople.threaddemo;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Thread t = new Worker();
+		Thread t2 = new Worker();
+		Thread t3 = new Worker();
+	//	t.setName("Main Thread");
+
+		t.start();
+		t2.start();
+		t3.start();
+	}
+
+}

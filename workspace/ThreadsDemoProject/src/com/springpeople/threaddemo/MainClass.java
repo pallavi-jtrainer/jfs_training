@@ -1,0 +1,54 @@
+package com.springpeople.threaddemo;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		RunnableWorker r = new RunnableWorker();
+		
+		Thread t = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				r.method1();
+			}
+		});
+		
+		Thread t1 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				r.method2();
+			}
+		});
+		
+		t.start();
+		t1.start();
+		
+//		Thread t = new Thread(r);
+//		Thread t1 = new Thread(r);
+//		Thread t2 = new Thread(r);
+//		
+//		t.start();
+//		t1.start();
+//		t2.start();
+		
+//		r.notifyAll();
+		
+//		t.notifyAll();
+//		try {
+//			t.wait();
+//		} catch (InterruptedException e) {
+//			System.out.println(e.getMessage());
+//		}
+//		
+//		Thread t = new Worker();
+//		Thread t2 = new Worker();
+//		Thread t3 = new Worker();
+//	//	t.setName("Main Thread");
+////		t.setPriority(9);
+//		t.start();
+//		t2.start();
+//		t3.start();
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.springpeople.threaddemo;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Thread t = new Thread();
+		t.setName("Main Thread");
+		t.start();
+	}
+
+}

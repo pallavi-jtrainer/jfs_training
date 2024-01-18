@@ -1,0 +1,24 @@
+/*
+ * strings are immutable
+ * strings are objects
+ * strings are array of characters
+ * 
+ */
+
+
+package com.springpeople.projectx.strings;
+
+public class StringsDemo {
+
+	public void method1() {
+		String str = "This is a string";
+		str = "This is also a string";
+		String str1 = new String("This is a string using constructor");
+		
+		str = str.concat(str1);
+		String[] array = str.split(" ");
+		for(String s: array) {
+			System.out.println(s);
+		}
+	}
+}

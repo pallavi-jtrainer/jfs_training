@@ -1,0 +1,5 @@
+package com.springpeople.mavendemo.factory;
+
+public class StudentsFactory {
+
+}

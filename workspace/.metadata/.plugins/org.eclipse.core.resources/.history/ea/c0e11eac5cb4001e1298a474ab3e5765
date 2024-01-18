@@ -1,0 +1,16 @@
+package com.springpeople.jdbcdemo;
+
+import com.springpeople.jdbcdemo.entity.Products;
+import com.springpeople.jdbcdemo.factory.ProductsFactory;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Products p = new Products(1, "Single Ruled Notebook", 35.00);
+		
+		String str = ProductsFactory.createProduct(p);
+		System.out.println(str);
+
+	}
+
+}
