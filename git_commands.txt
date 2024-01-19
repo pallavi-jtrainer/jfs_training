@@ -1,0 +1,42 @@
+Version control
+Git
+
+git init -> initialize a folder as a local git repository -> working directory
+git add <file(s)> -> add to the staging area
+git commit -m "message" -> commit to the local repository
+git push repo_name -> pushes to the remote repo
+git status -> returns the status of the files in git folder
+
+git remote add origin url -> connect to a remote repo
+
+git fetch -> retrieves to local repo
+git pull -> retrieves to working directory
+
+git merge
+git rebase branch_name => usually with main
+git rebase --continue / --abort
+
+git branch <branch_name> => pp_login_verification
+git switch branch_name => to switch between branches
+git checkout branch_name => to switch between branches
+git branch -D branch_name => to delete a branch
+git push remote --delete branch_name => delete remote branch
+git push remote :branch_name => shorter version
+git branch -r => list remote branches
+git branch -a => to list all local and remote branches
+
+git log
+
+git stash
+
+git checkout filename -> to revert changes before commit
+git rm filename -> to unstage a file
+
+git diff
+
+git reset =>to move commits from history back into working or
+staging area.
+git reset HEAD filename => to revert the changes to a file
+git reset --soft commitId => to move commit from local repo to staging area
+git reset --mixed => to move commit from local repo to working directory
+git reset --hard => to move commit from local repo to trash
