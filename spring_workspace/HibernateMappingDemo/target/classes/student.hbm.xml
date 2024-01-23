@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.springpeople.hibernate.mapping.HibernateMappingDemo.entity">
+	<class name="Student" table="STUDENT">
+		<id name="studentId" type="long">
+			<column name="student_id"></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="studentName" type="string">
+			<column name="student_name" not-null="true"></column>
+		</property>
+		<property name="email" type="string">
+			<column name="email" not-null="true" unique="true"></column>
+		</property>
+		<many-to-one name="course" class="Courses">
+			<column name="course_id" not-null="true"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

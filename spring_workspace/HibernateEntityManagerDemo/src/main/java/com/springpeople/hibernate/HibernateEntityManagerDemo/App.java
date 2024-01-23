@@ -15,7 +15,7 @@ public class App
 //        Employee e = new Employee("Prithvi", "Raj", "pr@cn.c", 23456.00);
 //        
 //        EmployeeDao.createEmployee(e);
-    	EmployeeDao.updateEmployee(1, 34567.00);
+    	new EmployeeDao().updateEmployee(1, 34567.00);
     	EmployeeDao.retrieveAllEmployees();
     	
     	JPAUtility.close();

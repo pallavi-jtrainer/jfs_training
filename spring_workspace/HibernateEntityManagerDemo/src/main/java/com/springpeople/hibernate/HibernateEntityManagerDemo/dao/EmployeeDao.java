@@ -10,7 +10,7 @@ import jakarta.persistence.Query;
 
 public class EmployeeDao {
 
-	public static void updateEmployee(int id, double sal) {
+	public void updateEmployee(int id, double sal) {
 		EntityManager em = JPAUtility.getEntityManager();
 		
 		em.getTransaction().begin();

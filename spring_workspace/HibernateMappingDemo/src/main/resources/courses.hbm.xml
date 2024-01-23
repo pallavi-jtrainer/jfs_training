@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.springpeople.hibernate.mapping.HibernateMappingDemo.entity">
+	<class name="Courses" table="COURSES">
+		<id name="id" type="long">
+			<column name="course_id"></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="courseName" type="string">
+			<column name="course_name" not-null="true" unique="true"></column>
+		</property>
+		<set name="students" table="STUDENT" fetch="select">
+			<key>
+				<column name="course_id" not-null="true"></column>
+			</key>
+			<one-to-many class="Student"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

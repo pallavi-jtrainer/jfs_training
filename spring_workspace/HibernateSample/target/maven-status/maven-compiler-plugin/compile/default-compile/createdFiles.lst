@@ -1,0 +1,6 @@
+com\springpeople\hibernate\mapping\HibernateSample\dao\ProjectsDao.class
+com\springpeople\hibernate\mapping\HibernateSample\entity\Employee.class
+com\springpeople\hibernate\mapping\HibernateSample\dao\EmployeeDao.class
+com\springpeople\hibernate\mapping\HibernateSample\entity\Projects.class
+com\springpeople\hibernate\mapping\HibernateSample\utils\JpaUtils.class
+com\springpeople\hibernate\mapping\HibernateSample\App.class
