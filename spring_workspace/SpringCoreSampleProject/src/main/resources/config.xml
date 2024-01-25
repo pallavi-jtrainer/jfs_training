@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns:p="http://www.springframework.org/schema/p"-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- setter based dependency injection without p-namespace -->
+<!-- 	<bean name="student" class="com.springpeople.core.SpringCoreSampleProject.entity.Student">
+		<property name="studentId" value="1"></property>
+		<property name="studentName" value="Prithvi"></property>
+	</bean>
+	
+	<bean name="course" class="com.springpeople.core.SpringCoreSampleProject.entity.Courses">
+		<property name="id" value="101"></property>
+		<property name="name" value="spring framework"></property>
+		<property name="s" ref="student"></property>
+	</bean> -->
+	
+	<!-- p-namespace - setter based dependency injection -->
+<!-- 	<bean class="com.springpeople.core.SpringCoreSampleProject.entity.Student"
+		id="student" p:studentId="1" p:studentName="Prithvi"
+		></bean>
+	<bean class="com.springpeople.core.SpringCoreSampleProject.entity.Courses"
+		id="course" p:id="101" p:courseName="spring framework"
+		p:s-ref="student">
+	</bean> -->
+	
+	<!-- Constructor based depenency injection without c-namespace -->
+	<!-- <bean name="student" class="com.springpeople.core.SpringCoreSampleProject.entity.Student">
+		<constructor-arg name="studentId" value="1" type="int"></constructor-arg>
+		<constructor-arg name="studentName" value="Prithvi"></constructor-arg>
+	</bean>
+	<bean name="courses" class="com.springpeople.core.SpringCoreSampleProject.entity.Courses">
+		<constructor-arg name="id" value="101" type="int"></constructor-arg>
+		<constructor-arg name="courseName" value="Spring Core"></constructor-arg> -->
+		<!-- <constructor-arg name="s" ref="student"></constructor-arg> -->
+<!-- 		<constructor-arg><ref bean="student"/></constructor-arg>
+	</bean> -->
+	<!-- Constructor based depenency injection with c-namespace -->
+	<bean id="student" class="com.springpeople.core.SpringCoreSampleProject.entity.Student"
+		c:studentId="1" c:studentName="Prithvi"
+	>
+	</bean>
+	<bean id="courses" class="com.springpeople.core.SpringCoreSampleProject.entity.Courses"
+		c:id="101" c:courseName="Spring core" c:s-ref="student">
+	</bean>
+	
+</beans>
