@@ -28,7 +28,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>${spring.verison}</version>
-		</dependency>	
+		</dependency>
 	</dependencies>
 
 <!--	<build>

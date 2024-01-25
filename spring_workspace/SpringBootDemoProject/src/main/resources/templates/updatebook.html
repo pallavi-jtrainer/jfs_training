@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Update Book</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<div class="card-head bg-dark text-white">
+					<h3>Update Book Details</h3>
+				</div>
+				<div class="card-body">
+					 <form th:action="@{/books/update}" method="POST" th:object="${book}">
+                <div class="row">
+                    <div class="col-2">
+                        <label>Book Id</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" th:field="*{bookId}" class="form-control" readonly/>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-2">
+                        <label>Title</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" th:field="*{title}" class="form-control"/>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-2">
+                        <label>ISBN</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" th:field="*{isbn}" class="form-control"/>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-2">
+                        <label>Price</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" th:field="*{price}" class="form-control" />
+                    </div>
+                </div> <br/>
+                <button type="submit" class="btn btn-success">Update</button>             
+				<a th:href="@{/books/list}" class= "btn btn-primary">Show All Books</a>
+            </form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
