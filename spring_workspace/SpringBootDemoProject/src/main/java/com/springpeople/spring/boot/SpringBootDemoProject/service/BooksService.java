@@ -54,4 +54,8 @@ public class BooksService {
 		} else
 			System.out.println("Update not done");
 	}
+	
+	public List<Books> listAllByTitle(String title) {
+		return repo.findAllByTitleStartingWith(title);
+	}
 }
