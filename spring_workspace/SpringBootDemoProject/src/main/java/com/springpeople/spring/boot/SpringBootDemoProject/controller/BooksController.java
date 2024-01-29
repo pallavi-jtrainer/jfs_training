@@ -58,7 +58,8 @@ public class BooksController {
 	
 	@PostMapping("/update")
     public String updateBook(@ModelAttribute Books book) {
-       service.updateBook(book);
+      // service.updateBook(book);
+		service.updatePrice(book.getBookId(), book.getPrice());
        return "redirect:list";
     }
 	

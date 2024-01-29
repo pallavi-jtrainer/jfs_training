@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.springpeople.spring.boot.SpringBootDemoProject.entity.Books;
 import com.springpeople.spring.boot.SpringBootDemoProject.repository.BooksRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class BooksService {
 	
@@ -42,5 +44,14 @@ public class BooksService {
 	
 	public void deleteBook(long id) {
 		repo.delete(retrieveBookById(id));
+	}
+	
+	@Transactional
+	public void updatePrice(long id, double price) {
+		int res = repo.updatePrice(id, price);
+		if(res > 0) {
+			System.out.println("Update done");
+		} else
+			System.out.println("Update not done");
 	}
 }
