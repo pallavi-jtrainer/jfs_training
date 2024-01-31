@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <!-- <head>
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        This is the body of my web page
+        <p>Adding a Paragraph</p>
+    </body> -->
+
+    <head>
+        <title>Mavericks Developers Directory</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <script>
+            function initStorage() {
+                function saveName() {
+                    let name = document.getElementById("name").value;
+                    localStorage.setItem("name", name);
+                }
+
+                function saveEmail() {
+                    let email = document.getElementById("email").value;
+                    localStorage.setItem("email", email);
+                }
+            }
+            // function saveName() {
+            //     let name = document.getElementById("name").value;
+            //     localStorage.setItem("name", name);
+            // }
+
+            // function saveEmail() {
+            //     let email = document.getElementById("email").value;
+            //     localStorage.setItem("email", email);
+            // }
+            // function saveToStorage() {
+            //     saveName();
+            //     saveEmail();
+            // }
+            function clearAll() {
+                localStorage.clear();
+                window.location.reload();
+            }
+        </script>
+        <!-- <style>
+            * {
+                background-color:rgb(247, 215, 129);
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            p {
+                background-color: chocolate;
+                font-style: normal;
+                color: darkblue;
+            }
+            #h21{
+                background-color: rgb(140, 226, 226);
+                padding: 0.2em;
+                border: black;
+                border-style: solid;
+                border-width: 5px;
+            }
+            .white {
+                font-size: xx-large;
+                color: whitesmoke;
+            }
+            
+            nav h3 {
+                color:rebeccapurple;
+                font-weight: 900;
+            }
+            ul>li{
+                color:rgb(79, 0, 153);
+                font-style: normal;
+                font-weight: bolder;
+            }
+        </style> -->
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Mavericks Developers Directory</h1>
+                <h2>Find a Maverick NOW!!</h2>
+            </header>
+    
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="browse.html">BROWSE DEVELOPERS</a></li>
+                    <li><a href="register.html">REGISTER WITH US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+    
+            <aside>
+                <nav id="leftmenu">
+                    <h3>Links</h3>
+                    <ol>
+                        <li>JAVA</li>
+                        <li>MYSQL</li>
+                        <li>ANGULAR</li>
+                        <LI>jQuery</LI>
+                        <li>Web Designing</li>
+                        <li>Dot Net</li>
+                        <li>HTML5/CSS3/JavaScript</li>
+                        <li>AI/ML</li>
+                    </ol>
+                    <br />
+                    <div>
+                        <h3>NewsLetter</h3>
+                        <form>
+                            Name: <br> <input type="text" id="name" name="name">
+                            <br>
+                            Email: <br> <input type="email" id="email" name="email">
+                            <br><br>
+                            <!-- <button id="send">Send</button>
+                            <input type="button">Clear All -->
+                            <input type="submit" value="Send" onclick="initStorage()">
+                            <input type="reset" value="Clear" onclick="clearAll()">
+                        </form>
+                    </div>
+                </nav>
+            </aside>
+            <section>
+                <h2>Welcome To Mavericks Developers Directory</h2>
+                <img class="logo" src="images/Dallas-Mavericks-Logo.png" width="15%" height="1%">
+                <h3>Who Are We?</h3>
+                <p>We are a fictional organization that provides developers for hire around the world!</p>
+                <h3>What Skills Do Our Developers Have?</h3>
+                <p>Our developers skills range from Java and Dot Net to AI and ML</p>
+            </section>
+            <section>
+                <h2>Latest Developers</h2>
+                <div class="dev">
+                    <h4>SHWETHA</h4>
+                    <ul>
+                        <li><strong>Location: </strong>Bangalore</li>
+                        <li><strong>Skills: </strong>Java, Spring, HTML/CSS</li>
+                        <li><strong>Availability: </strong>Full - time</li>
+                    </ul>
+                </div>
+                <div class="dev">
+                    <h4>MANJULA</h4>
+                    <ul>
+                        <li><strong>Location: </strong>Chennai</li>
+                        <li><strong>Skills: </strong>Dot Net, RPA</li>
+                        <li><strong>Availability: </strong>Full - time</li>
+                    </ul>
+                </div>
+                <div class="dev">
+                    <h4>MOHAN</h4>
+                    <ul>
+                        <li><strong>Location: </strong>Hyderabad</li>
+                        <li><strong>Skills: </strong>Java, Python, ML</li>
+                        <li><strong>Availability: </strong>Full - time</li>
+                    </ul>
+                </div>
+                <div class="dev">
+                    <h4>AAYUSH</h4>
+                    <ul>
+                        <li><strong>Location: </strong>Delhi</li>
+                        <li><strong>Skills: </strong>MySQL, Java</li>
+                        <li><strong>Availability: </strong>Full - time</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div>
+            <footer>
+                Copyright &copy; 2021, MAVERICKS DEVELOPERS DIRECTORY - Index
+            </footer>
+        </div>
+    </body>
+</html>

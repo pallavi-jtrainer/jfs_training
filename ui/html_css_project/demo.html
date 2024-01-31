@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo For JS</title>
+        <script>
+            // var counter = 10;
+            // console.log(typeof(counter));
+
+            // counter = "String";
+            // console.log(typeof(counter));
+
+            // counter = true;
+            // console.log(typeof(counter));
+        </script>
+    </head>
+    <body>
+        <p>
+            <label for="first">Number 1: </label>
+            <input type="number" name="first" id="first">
+        </p>
+        <p>
+            <label for="second">Number 2: </label>
+            <input type="number" name="second" id="second">
+        </p>
+        <p>
+            <button id="add" onclick="add()">ADD</button>
+        </p>
+        <p>
+            <button id="div" onclick="div()">Divide</button>
+        </p>
+        <div id="result"></div>
+        <script>
+            function add() {
+                let one = parseInt(document.getElementById("first").value);
+                let two = parseInt(document.getElementById("second").value);
+
+                let result = one + two;
+
+                console.log(result);
+                document.getElementById("result").innerHTML = "Result: " + result;
+                alert(result);
+            }
+            function div() {
+                let one = parseInt(document.getElementById("first").value);
+                let two = parseInt(document.getElementById("second").value);
+
+                let result = one / two;
+
+                console.log(result);
+                document.getElementById("result").innerHTML = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>

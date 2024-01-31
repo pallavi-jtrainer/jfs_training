@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mavericks Developers Directory</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Mavericks Developers Directory</h1>
+        <h2>Find a Maverick NOW!!</h2>
+      </header>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="browse.html">BROWSE DEVELOPERS</a></li>
+          <li><a href="register.html">REGISTER WITH US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+      <aside>
+        <nav id="leftmenu">
+          <h3>Links</h3>
+          <ol>
+            <li>JAVA</li>
+            <li>MYSQL</li>
+            <li>ANGULAR</li>
+            <LI>jQuery</LI>
+            <li>Web Designing</li>
+            <li>Dot Net</li>
+            <li>HTML5/CSS3/JavaScript</li>
+            <li>AI/ML</li>
+          </ol>
+        </nav>
+      </aside>
+
+      <section>
+        <h3>Contact Us</h3>
+        <p>Please fill the below form to contact a developer</p>
+        <form>
+          <p>
+            <label for="name">Full Name: </label>
+            <input type="text" name="name" id="name">
+          </p>
+          <p>
+            <label for="email">Email Address: </label>
+            <input type="email" name="email" id="email">
+          </p>
+          <p>
+            <label for="phone">Contact Number: </label>
+            <input type="tel" name="phone" id="phone">
+          </p>
+          <p>
+            <label for="call">Best Time To Call: </label>
+            <input type="radio" name="time" id="time" value="morning" checked> Morning
+            <input type="radio" name="time" id="time" value="afternoon"> Afternoon
+            <input type="radio" name="time" id="time" value="evening"> Evening
+          </p>
+          <!-- <p>
+            <label>Education: </label>
+            <select id="edu" name="edu">
+              <option value="be">Bachelor of Engineering</option>
+              <option value="bsc">Bachelor of Science</option>
+              <option value="diploma">ITI</option>
+            </select>
+          </p> -->
+          <p>
+            <label for="loc">Location: </label>
+            <input name="loc" list="location">
+            <datalist id="location">
+              <option value="Bangalore">
+              <option value="Pune">
+              <option value="Hyderabad">
+              <option value="Mangalore">
+              <option value="Delhi">
+              <option value="Chennai">
+              <option value="Mumbai">
+              <option value="Banaras">    
+            </datalist>
+          </p>
+          <fieldset name="about">
+            <legend>About Your Project</legend>
+            <script>
+              function updateTextInput(val) {
+                document.getElementById("textInput").value = val;
+              }
+            </script>
+            <p>
+              <label for="budget">Budget: </label>
+              <input type="range" name="rangeInput" min="0" max="100000" onchange="updateTextInput(this.value)">
+              <input type="text" id="textInput" value="">
+            </p>
+            <p>
+              <label>Skills Needed: </label>
+              <table>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="services" value="html">HTML/CSS
+                  </td>
+                  <td>
+                    <input type="checkbox" name="services" value="ng">Angular
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="services" value="java">JAVA
+                  </td>
+                  <td>
+                    <input type="checkbox" name="services" value="net">DOT NET
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="services" value="web">Web Designing
+                  </td>
+                  <td>
+                    <input type="checkbox" name="services" value="ai">AI/ML
+                  </td>
+                </tr>
+              </table>
+            </p>
+            <p>
+              <label for="start">Start Date: </label>
+              <input type="date" name="start" id="start">
+            </p>
+            <p>
+              <label for="num">Number of Web Pages: </label>
+              <input type="number" name="num" id="num">
+            </p>
+            <p>
+              <label for="col">Main Color for WebSite: </label>
+              <input type="color" name="col" id="col">
+            </p>
+          </fieldset>
+          <p>
+            <button id="send" name="send">Submit Inquiry</button>
+          </p>
+        </form>
+      </section>
+    </div>
+    <div>
+      <footer>
+        Copyright &copy; 2021, MAVERICKS DEVELOPERS DIRECTORY - Index
+      </footer>
+    </div>
+  </body>
+</html>

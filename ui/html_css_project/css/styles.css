@@ -1,0 +1,223 @@
+* {
+    margin: 0 auto 0 auto;
+	text-align:left;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    padding: 10px 0;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    padding: 5px 20px;
+}
+
+h2 { 
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color:blue;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #054bcd;
+}
+
+p {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+#container {
+    width: 1002px;
+    overflow: auto;
+    margin-left: 10%;
+}
+
+header {
+    width: 960px;
+    height: 85px;
+}
+
+header h1 {
+    float: left;
+    font-size: 44px;
+    padding:20px 0 0 20px;
+}
+
+header h2 {
+    float: right;
+    color:#cc3305;
+    padding: 40px 20px 0 0;
+    font-size: 20px;
+}
+
+nav#menu {
+    display: block;
+    float: left;
+    width: 960px;
+    font-size: 16px;
+    /* margin-bottom: 0.5%; */
+}
+
+nav#menu ul {
+    list-style: none;
+    padding-top: 18px;
+    margin-left: auto;
+    width: 960px;
+    height: 54px;
+}
+
+nav#menu li {
+    list-style: none;
+    display: inline;
+}
+
+nav#menu li a, nav#menu li a:visited {
+    color: aliceblue;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding:0 13px 0 13px;
+}
+
+aside{
+    color:#000;
+    font-weight: bold;
+}
+
+aside input[type="text"],aside input[type="email"]{
+	color:#000;
+	margin-bottom:5px;
+}
+
+nav#leftmenu {
+    margin-top:15px;
+	width:190px;
+	float:left;
+	background:#d2d6d2;
+	border-radius:10px;
+	padding: 15px 20px 10px 10px;
+}
+
+nav#leftmenu ol {
+    list-style: none;
+    padding: 0;
+}
+
+nav#leftmenu li {
+    list-style: none;
+    padding:8px 0 8px 0;
+    border-bottom: dashed darkblue 1px;
+}
+
+nav#leftmenu li a, nav#leftmenu li a:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#leftmenu h3{
+	color:#000000;
+	padding:0;
+	padding-bottom:8px;
+	border-bottom:#000 solid 2px;
+	font-size:16px;
+}
+
+section {
+    display: block;
+    width: 680px;
+    margin-top: 15px;
+    float: left;
+    background-color: aliceblue;
+    border: 6px solid darkblue;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 3%;
+}
+
+section h2 {
+    color: rgb(4, 4, 78);
+    margin-bottom: 3%;
+}
+
+section p {
+    color: rgb(1, 14, 131);
+}
+
+.logo {
+    float: right;
+    margin: 15px;
+}
+
+.dev {
+    width: 170px;
+    float: right;
+
+}
+
+.dev ul {
+    margin-bottom:  10px;
+    list-style: none;
+}
+
+.dev li {
+    list-style: none;
+    line-height: 1.5em;
+    color:black;
+}
+
+footer{
+	width:100%;
+	background:rgb(1, 14, 131);
+	color:#fff;
+	height:30px;
+	text-align:center;
+	margin-top:20px;
+	padding-top:15px;
+    /* position: fixed; */
+}
+
+table.dev-table,table.dev-table tr,table.dev-table td,table.dev-table th{
+    font-size:110%;
+    color: black;
+}
+.dev-table tr,table.dev-table td{
+	border-bottom: 1px dashed #000000;
+}
+
+fieldset legend {
+    color: darkred;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#sk td {
+    color:rgb(4, 4, 78);
+}

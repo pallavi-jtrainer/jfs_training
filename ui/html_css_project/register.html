@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mavericks Developers Directory</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <style>
+      #map {
+        width: 400px;
+        height: 250px;
+        float: left;
+      }
+    </style>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Mavericks Developers Directory</h1>
+        <h2>Find a Maverick NOW!!</h2>
+      </header>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="browse.html">BROWSE DEVELOPERS</a></li>
+          <li><a href="#">REGISTER WITH US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+      <aside>
+        <nav id="leftmenu">
+          <h3>Links</h3>
+          <ol>
+            <li>JAVA</li>
+            <li>MYSQL</li>
+            <li>ANGULAR</li>
+            <LI>jQuery</LI>
+            <li>Web Designing</li>
+            <li>Dot Net</li>
+            <li>HTML5/CSS3/JavaScript</li>
+            <li>AI/ML</li>
+          </ol>
+        </nav>
+      </aside>
+
+      <section>
+        <h3>Register As A Developer</h3>
+        <form>
+          <p>
+            <label for="first">First Name: </label>
+            <input type="text" name="first" id="first">
+          </p>
+          <p>
+            <label for="last">Last Name: </label>
+            <input type="text" name="last" id="last">
+          </p>
+          <p>
+            <label for="skills">Skills: </label>
+            <table id="sk">
+              <tr>
+                <td>
+                  <input type="checkbox" name="services" value="html">HTML/CSS
+                </td>
+                <td>
+                  <input type="checkbox" name="services" value="ng">Angular
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="services" value="java">JAVA
+                </td>
+                <td>
+                  <input type="checkbox" name="services" value="net">DOT NET
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="services" value="web">Web Designing
+                </td>
+                <td>
+                  <input type="checkbox" name="services" value="ai">AI/ML
+                </td>
+              </tr>
+            </table>
+          </p>
+          <p>
+            <label for="loc">Location: </label>
+            <div id="map"></div>
+          </p>
+          <div style="clear:both;"></div>
+          <p>
+            <button id="register" name="register">Register</button>
+            <input type="reset" value="Clear">
+          </p>
+        </form>
+      </section>
+    </div>
+    <div style="margin-top: 11.5%;">
+      <footer>
+        Copyright &copy; 2021, MAVERICKS DEVELOPERS DIRECTORY - Index
+      </footer>
+    </div>
+  </body>
+</html>
