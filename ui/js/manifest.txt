@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+# pages
+index.html
+
+# scripts
+apiDemo.js
+
+NETWORK:
+
+FALLBACK:
