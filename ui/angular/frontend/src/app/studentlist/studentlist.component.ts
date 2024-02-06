@@ -33,4 +33,8 @@ export class StudentlistComponent {
   showDetails(id: number) {
     this.route.navigate(['/details/', id]);
   }
+
+  goToUpdate(id:number) {
+    this.route.navigate(['/update/', id]);
+  }
 }

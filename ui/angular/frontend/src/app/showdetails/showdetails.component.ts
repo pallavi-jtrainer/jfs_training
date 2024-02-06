@@ -27,4 +27,8 @@ export class ShowdetailsComponent {
         console.log(this.student);
       })
   }
+
+  returnToHome() {
+    this.router.navigate(['home']);
+  }
 }

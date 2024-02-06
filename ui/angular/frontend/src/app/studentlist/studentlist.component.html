@@ -23,7 +23,7 @@
             <td>{{s.email}}</td>
             <td>{{s.phone}}</td>
             <td>
-              <a class="btn btn-warning">Change Password</a>
+              <a class="btn btn-warning" (click)="goToUpdate(s.studentId)">Change Password</a>
               <a class="btn btn-info" (click)="showDetails(s.studentId)">Show Details</a>
             </td>
           </tr>
