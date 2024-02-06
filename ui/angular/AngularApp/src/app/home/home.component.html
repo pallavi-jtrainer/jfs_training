@@ -1,0 +1,52 @@
+<div class="container">
+  <!-- card for adding student form-->
+  <div class="card">
+    <div class="card-header">
+      <h3>Add a student</h3>
+    </div>
+    <div class="card-body">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label>Id: </label>
+          <input type="text" class="form-control" id="id" name="id" [(ngModel)]="s.id"/>
+        </div>
+        <div class="form-group">
+          <label>Student Name: </label>
+          <input type="text" class="form-control" id="sname" name="sname" [(ngModel)]="s.studentName"/>
+        </div>
+        <div class="form-group">
+          <label>Age: </label>
+          <input type="text" class="form-control" id="age" name="age" [(ngModel)]="s.age"/>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addStudentDetails() ">Add Student</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <!-- card for student list -->
+  <div class="card">
+    <div class="card-header bg-info">
+      <h3>List of Students</h3>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Student Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{student.id}}</td>
+          <td>{{student.studentName}}</td>
+          <td>{{student.age}}</td>
+          <td><a class="btn btn-success" (click)="getStudentDetails(student.id)">Show Details</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
