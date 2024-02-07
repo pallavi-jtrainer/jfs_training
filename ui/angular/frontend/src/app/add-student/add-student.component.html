@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="card myCard">
+    <div class="card-header">
+      <h3>New Student Registration</h3>
+    </div>
+    <div class="card-body">
+      <form class="form-horizontal" [appMatchPassword]="['password', 'confirmPassword']"
+      #registerForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" class="form-control" placeholder="First Name"
+            id="firstname" required [(ngModel)]="student.firstName" name="firstname" #firstname="ngModel">
+          <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched) || registerForm.submitted" class="text-danger">
+            <div *ngIf="firstname.errors?.['required']">First Name is Required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" placeholder="Last Name"
+            id="lastname" required [(ngModel)]="student.lastName" name="lastname" #lastname="ngModel">
+          <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched) || registerForm.submitted" class="text-danger">
+            <div *ngIf="lastname.errors?.['required']">Last Name is Required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" placeholder="Enter Email"
+            id="email" required [(ngModel)]="student.email" name="emailAddress"
+            #emailAddress="ngModel" appEmailPattern email>
+          <div *ngIf="(emailAddress.touched || emailAddress.dirty) || registerForm.submitted" class="text-danger">
+            <div *ngIf="emailAddress.errors?.['email']">
+              Enter a Valid Email
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" class="form-control" placeholder="Enter Contact Number"
+            id="phone" required [(ngModel)]="student.phone" name="phone"
+            #phone="ngModel">
+          <div *ngIf="(phone.dirty || phone.touched)" class="text-danger">
+            <div *ngIf="phone.errors?.['required']">
+              Phone number must be valid and is required
+            </div>
+            <div *ngIf="phone.errors?.['length'] == 10">
+              Phone number must be 10 digits only
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Enter Password"
+            id="password" required maxlength="15" minlength="8"
+            [(ngModel)]="student.password" name="password"
+            #password="ngModel" appPasswordPattern>
+          <div *ngIf="password.dirty || password.touched || registerForm.submitted" class="text-danger">
+            <div *ngIf="password.errors?.['minlength'] < 8 || password.errors?.['maxlength'] > 15">
+              Password Length should be between 8 and 15 characters
+            </div>
+            <div *ngIf="password.errors?.['required']">
+              Password is mandatory
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm Password"
+            id="confirmPassword" minlength="8" maxlength="15" required
+            [(ngModel)]="confirm" name="confirmPassword"
+            #confirmPassword="ngModel" appPasswordPattern>
+          <div *ngIf="confirmPassword.dirty || confirmPassword.touched || registerForm.submitted" class="text-danger">
+            <div *ngIf="confirmPassword.errors?.['minlength'] < 8 || confirmPassword.errors?.['maxlength'] > 15">
+              Password Length should be between 8 and 15 characters
+            </div>
+            <div *ngIf="confirmPassword.errors?.['required']">
+              Password is mandatory
+            </div>
+            <div *ngIf="confirmPassword.errors?.['passwordMismatch']">
+              Password and Confirm Password are not the same
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 1%;"
+        [formNoValidate]="registerForm">Register</button>
+      </form>
+    </div>
+  </div>
+</div>

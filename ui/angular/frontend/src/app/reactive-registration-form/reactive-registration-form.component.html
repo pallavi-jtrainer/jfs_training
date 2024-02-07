@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="card myCard">
+    <div class="card-header bg-dark text-white">
+      <h3>Student Registration Form</h3>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="registerationForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control"
+            formControlName="firstname"
+            [ngClass]="{'is-invalid': submitted && f['firstname']}">
+          <div *ngIf="f['firstname'].errors" class="text-danger">
+            <div *ngIf="f['firstname'].errors['required']">First Name is required</div>
+            <div *ngIf="f['firstname'].errors['minLength'] < 5">First Name should have a minimum of 5 characters</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="Last Name"
+            formControlName="lastName"
+            [ngClass]="{'is-invalid': submitted && f['lastName']}">
+          <div *ngIf="f['lastName'].errors" class="text-danger">
+            <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+            <div *ngIf="f['lastName'].errors['minLength'] < 5">Last Name should have a minimum of 5 characters</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="Email Address"
+            formControlName="emailAddress"
+            [ngClass]="{'is-invalid': submitted && f['emailAddress']}">
+          <div *ngIf="f['emailAddress'].errors" class="invalid-feedback">
+            <div *ngIf="f['emailAddress'].errors['required']">Email is required</div>
+            <div *ngIf="f['emailAddress'].errors['email']">Please enter a valid email address</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" class="form-control" placeholder="Contact Number"
+            formControlName="phone"
+            [ngClass]="{'is-invalid': submitted && f['phone']}">
+          <div *ngIf="f['phone'].errors" class="invalid-feedback">
+            <div *ngIf="f['phone'].errors['required']">First Name is required</div>
+            <div *ngIf="f['phone'].errors['minLength'] < 10 || f['phone'].errors['maxlength']>10">
+              10 digit phone number please</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="text" class="form-control" placeholder="Password"
+            formControlName="password"
+            [ngClass]="{'is-invalid': submitted && f['password']}">
+          <div *ngIf="f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Password is required</div>
+            <div *ngIf="f['password'].errors['minLength'] < 8 || f['password'].errors['maxlength'] > 15">
+              Password should have 8 to 15 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="text" class="form-control" placeholder="Confirm Password"
+            formControlName="confirmPassword"
+            [ngClass]="{'is-invalid': submitted && f['confirmPassword']}">
+          <div *ngIf="f['confirmPassword'].errors" class="invalid-feedback">
+            <div *ngIf="f['confirmPassword'].errors['required']">Confirm Password is required</div>
+            <div *ngIf="f['confirmPassword'].errors['minLength'] < 8 || f['confirmPassword'].errors['maxlength'] > 15">
+              Confirm Password should have 8 to 15 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

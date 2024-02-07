@@ -25,8 +25,8 @@ export class StudentService {
   public updatePassword(student:Student): Observable<any> {
     const header = {'Content-Type': 'application/json',
     "Access-Control-Allow-Origin": '*'};
-    return this.http.put<any>(`${this.baseUrl}/pass/${student.studentId}/${student.password}`,
-      student, {headers: header, responseType: 'text' as 'json'});
+    return this.http.put<Student>(`${this.baseUrl}/pass/${student.studentId}/${student.password}`, student,
+    {headers: header,responseType: 'text' as 'json'});
   }
 
   public createStudent(student:Student): Observable<Student> {

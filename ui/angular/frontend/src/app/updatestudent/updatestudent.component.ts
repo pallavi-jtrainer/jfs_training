@@ -33,6 +33,8 @@ export class UpdatestudentComponent {
     this.studentService.updatePassword(this.student)
       .subscribe(data => {
         console.log(data);
+        // window.location.reload();
+        this.router.navigate(['home']);
       })
   }
 
